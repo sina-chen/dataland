@@ -1,5 +1,6 @@
 # Dataland
-This repository includes code for and results if scraping and cleaning polling data for the 2024 election in Dataland, as well as code for computing trends for each candidate based on 7-day polling averages.
+This repository contains code and results related to the scraping and cleaning of polling data for the 2024 election in Dataland. It also includes code for calculating trends for each candidate based on a 7-day average of polling results.
+To run the code, the "tidyverse", "rvest", and "zoo" package are required. The code was implemented with R version 4.2.2.
 
 ## Description of files
 
