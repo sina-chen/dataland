@@ -36,7 +36,7 @@ polls_get <- function(url = "https://cdn-dev.economistdatateam.com/jobs/pds/code
              alternate = if_else(str_detect(chettam, "[**]"), 1, 0),   # add dummy whether included in alternate question 
              date = base::as.Date(date, "%m/%d/%y"),                   # convert date format
              sample = sample %>%                                       # convert sample size to numeric
-               str_remove_all("[,]|[*]") %>% 
+               str_remove_all("\\D+") %>% 
                as.numeric()) %>% 
       rename("n" = sample) %>% 
       mutate_at(vars(-c("date", "pollster", "n", "overseas", "alternate")),   # convert poll support shares to numeric 
