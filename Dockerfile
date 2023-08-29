@@ -1,4 +1,3 @@
-# Use an official R runtime as a parent image
 FROM rocker/tidyverse:4.0.1
 
 RUN apt-get update && apt-get install -y \
@@ -9,10 +8,10 @@ RUN apt-get update && apt-get install -y \
 # Install required R packages
 RUN R -e "install.packages(c('tidyverse', 'zoo', 'rvest'), repos='http://cran.rstudio.com/')"
 
-# Set the working directory to /app
+# Set the working directory 
 WORKDIR /dataland
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container 
 COPY . /dataland/
 
 # Run an R script when the container launches
